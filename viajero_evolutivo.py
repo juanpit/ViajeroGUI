@@ -10,8 +10,8 @@ inicio = time.time()
 bandera = 0 #bandera que nos ayuda a ayudarle a la mutacion despues de que no se encuentre un mejor fitness despues de (iteraciones/2) veces
 
 ciudades = 50 #numero de ciudades a recorrer
-poblacion = 20 #miu
-individuos_nuevos = 15 #lambda 
+poblacion = 90 #miu
+individuos_nuevos = 50 #lambda 
 suma_de_mu_y_lambda = poblacion + individuos_nuevos
 
 
@@ -34,7 +34,7 @@ lista_x = [0] * ciudades
 lista_y = [0] * ciudades
 
 
-r = 0.9 #El porcentaje de lambda que se va a generar por cruza
+r = 0.8 #El porcentaje de lambda que se va a generar por cruza
 m = 1-r #El porcentaje de lambda que se va a generar por mutacion (r + m = 1, R es mas importante)
 
 #Valores que nos van a almacenar las veces que se debe ejecutar un ciclo para que se almacenen Lambda nuevos
@@ -236,7 +236,7 @@ fig = plt.figure()
 iteraciones = 0
 help = 0
 aiuda =0
-veces = 1000#int(input('ITERACIONES:     '))
+veces = 10000#int(input('ITERACIONES:     '))
 while iteraciones < veces:
     nosequees += 1
     
