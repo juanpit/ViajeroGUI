@@ -30,6 +30,8 @@ for i in range(ciudades): #ciclo para almacenar las coordenadas de las ciudades 
     lista_x[i] = lista_ciudades[mejor_combinacion[i]][0]
     lista_y[i] = lista_ciudades[mejor_combinacion[i]][1]
 '''
+lista_x = []
+lista_y = []
 
 l_fitness = IntVar
 
@@ -58,7 +60,7 @@ def proyecto():
 
 
     def algo_evolutivo(): #se supone que esta funcion ejecuta el algoritmo
-        global val_ciudades, val_iteraciones, val_lambda, val_poblacion
+        global val_ciudades, val_iteraciones, val_lambda, val_poblacion, lista_x, lista_y
 
         print('hola\n aqui inicia el algoritmo evolutivo')
         inicio = time.time()
