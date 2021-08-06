@@ -9,9 +9,9 @@ inicio = time.time()
 
 bandera = 0 #bandera que nos ayuda a ayudarle a la mutacion despues de que no se encuentre un mejor fitness despues de (iteraciones/2) veces
 
-ciudades = 50 #numero de ciudades a recorrer
-poblacion = 90 #miu
-individuos_nuevos = 50 #lambda 
+ciudades = 10 #numero de ciudades a recorrer
+poblacion = 10 #miu
+individuos_nuevos = 20 #lambda 
 suma_de_mu_y_lambda = poblacion + individuos_nuevos
 
 
