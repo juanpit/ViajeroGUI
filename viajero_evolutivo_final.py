@@ -3,10 +3,11 @@ import math
 import matplotlib.pyplot as plt
 import time
 
-inicio = time.time()
+inicio = time.time() #Variable que nos ayuda a calcular el tiempo transcurrido 
+
 # Este programa busca implementar una combinacion de algoritmos geneticos y estrategias evolutivas para poder resolver el
 # problema del agente viajero.
-#Creado por: Juan Pablo Velazquez
+#Creado por: Juan Pablo Velazquez 
 
 bandera = 0 #bandera que nos ayuda a ayudarle a la mutacion despues de que no se encuentre un mejor fitness despues de (iteraciones/2) veces
 
@@ -14,11 +15,11 @@ ciudades = 50 #numero de ciudades a recorer
 poblacion = 30 #miu
 individuos_nuevos = 20 #lambda 
 suma_de_mu_y_lambda = poblacion + individuos_nuevos
-r = 0.0 #El porcentaje de lambda que se va a generar por cruza
+r = 0.3 #El porcentaje de lambda que se va a generar por cruza
 m = 1-r #El porcentaje de lambda que se va a generar por mutacion (r + m = 1, R es mas importante)
 
 
-lista_ciudades = [0] * (ciudades + 1)#Lista de las ciudades que vamos a recorrer
+lista_ciudades = [0] * (ciudades + 1) #Lista de las ciudades que vamos a recorrer
 lista_poblacion = [0] * suma_de_mu_y_lambda #Lista para guardar la poblacion
 lista_fitness = [0] * suma_de_mu_y_lambda #lista que va a guardar los fitness de cada individuo
 lista_seleccionados = [0] * poblacion #lista que almacenara los miu seleciconados
@@ -41,7 +42,7 @@ lista_y = [0] * (ciudades + 1)
 valor_de_cruza = round(r*individuos_nuevos)
 valor_de_mutacion = round(m*individuos_nuevos)
 
-background = plt.imread('mapa.jpg')
+background = plt.imread('mapa.jpg') #Varible que almacena la imagen de background
 
 
 #Funcion de prueba para la generacion aleatoria de las ciudades de prueba
@@ -50,11 +51,11 @@ def generar_ciudades():
     for i in range(ciudades):
         lista_ciudades[i] = [0] * 2
         x_ciudad = random.randint(60, 1140) #X's
-        y_ciudad = random.randint(23, 725) #Y's
+        y_ciudad = random.randint(23, 725) #Y'
 
         while [x_ciudad,y_ciudad] in lista_ciudades: #este ciclo nos garantiza que no haya ciudades repetidas
-            x_ciudad = random.randint(0, 1200) #X's
-            y_ciudad = random.randint(0, 758) #Y's
+            x_ciudad = random.randint(60, 1140) #X's
+            y_ciudad = random.randint(23, 725) #Y's
         lista_ciudades[i][0] = x_ciudad
         lista_ciudades[i][1] = y_ciudad
 
