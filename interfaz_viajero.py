@@ -1,4 +1,7 @@
 #Iniico de la interfaz grafica para el proyecto del Viajero de Metodos Inteligencia Artificial
+#Created by: Juan Pablo Velazquez
+
+#Librerias-----------------------------------
 from os import stat
 import random
 import math
@@ -20,7 +23,9 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolb
 from matplotlib.figure import Figure
 import numpy as np
 
+
 '''
+#Bloque de codigo para forzar 10 iudades
 ciudades = 10
 lista_ciudades = [[270, 458], [722, 308], [465, 163], [172, 269], [587, 366], [817, 443], [950, 238], [649, 529], [384, 616], [1000, 600]]
 mejor_combinacion = [2, 3, 0, 8, 7, 4, 1, 6, 5, 9]
@@ -30,17 +35,20 @@ for i in range(ciudades): #ciclo para almacenar las coordenadas de las ciudades 
     lista_x[i] = lista_ciudades[mejor_combinacion[i]][0]
     lista_y[i] = lista_ciudades[mejor_combinacion[i]][1]
 '''
+#Variables Globales:
 lista_x = []
 lista_y = []
 
-l_fitness = IntVar
+l_fitness = IntVar #Label para mostrar el Fitness
 
 
+#Variables cuyo vaor se obtiene por medio de la Interfaz
 val_ciudades = None
 val_poblacion = None
 val_lambda = None
 val_iteraciones = None
 val_cruza = 0.0
+
 
 background = None
 bandera = None
@@ -51,11 +59,15 @@ lista_ciudades = []
 lista_poblacion = []
 
 #image = None
+
+#Inicio de Rpyecto
 def proyecto():
    
-    def kill_inicio(): 
+   #Funcion que mata la ventana inicio
+    def kill_inicio():
         win_inicio.destroy()
 
+    #Funcion que genera la ventana de creacion
     def crear_viaje(ventana):
         
         #kill_inicio()
@@ -102,6 +114,9 @@ def proyecto():
                 print(r)
                 print('Este es el valor de Mutacion:   ')
                 print(m)
+
+                print('combobox Cruza: \n')
+                print(int(val_cruza))
                 
 
                 #'----------------------------------------------------------
