@@ -6,10 +6,11 @@ import time
 inicio = time.time()
 # Este programa busca implementar una combinacion de algoritmos geneticos y estrategias evolutivas para poder resolver el
 # problema del agente viajero.
+#Creado por: Juan Pablo Velazquez
 
 bandera = 0 #bandera que nos ayuda a ayudarle a la mutacion despues de que no se encuentre un mejor fitness despues de (iteraciones/2) veces
 
-ciudades = 10 #numero de ciudades a recorrer
+ciudades = 40 #numero de ciudades a recorer
 poblacion = 10 #miu
 individuos_nuevos = 20 #lambda 
 suma_de_mu_y_lambda = poblacion + individuos_nuevos
@@ -236,7 +237,7 @@ fig = plt.figure()
 iteraciones = 0
 help = 0
 aiuda =0
-veces = 10000#int(input('ITERACIONES:     '))
+veces = 500#int(input('ITERACIONES:     '))
 while iteraciones < veces:
     nosequees += 1
     
@@ -309,7 +310,7 @@ while iteraciones < veces:
         fig.clear()
         
 
-    print(nosequees)
+    #print(nosequees)
     iteraciones += 1
 
 fin = time.time()
